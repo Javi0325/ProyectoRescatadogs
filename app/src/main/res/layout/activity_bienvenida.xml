@@ -7,35 +7,119 @@
     android:layout_height="match_parent"
     tools:context=".bienvenida">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BIENVENIDO"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="84dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/redondeado"
+            >
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuario"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="134dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/redondeado"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fuente"
+                    android:text="BIENVENIDO"
+                    android:textColor="@color/black"
+                    android:textSize="60dp"
+                    />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Solicitar Adopcion"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="220dp" />
+                 <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:fontFamily="@font/fuente"
+                    android:text="Usuario"
+                    android:textColor="@color/black"
+                    android:textSize="50dp"
+                    tools:layout_editor_absoluteX="181dp"
+                    tools:layout_editor_absoluteY="134dp" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver Eventos"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="321dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/redondeado"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="30dp"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:srcCompat="@drawable/perfil" />
+            </LinearLayout>
+                <!---  <TextView
+                    android:layout_margin="50dp"
+                    android:id="@+id/user_initial"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:text="A"
+                    android:textColor="@color/white"
+                    android:textSize="100dp"
+                    android:background="@drawable/burbuja"
+                    android:gravity="center"
+                    android:padding="8dp" />
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/redondeado"
+                >
+
+                <Button
+                    android:id="@+id/btnAdopcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#9B5100"
+                    android:fontFamily="@font/fuente"
+                    android:onClick="VerMascotas"
+                    android:text="Solicitar Adopcion"
+                    android:textColor="#FDCE40"
+                    android:textSize="35dp" />
+
+                <Button
+                    android:id="@+id/btnEventos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#9B5100"
+                    android:fontFamily="@font/fuente"
+                    android:onClick="VerEventos"
+                    android:text="Ver Eventos"
+                    android:textColor="#FDCE40"
+                    android:textSize="35dp"
+                    tools:layout_editor_absoluteX="143dp"
+                    tools:layout_editor_absoluteY="321dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Rescatadogs"
         tools:targetApi="31">
         <activity
+            android:name=".listaEventos"
+            android:exported="false" />
+        <activity
             android:name=".enEspera"
             android:exported="false" />
         <activity

@@ -6,36 +6,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/redondeado"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="254dp"
+            android:layout_height="220dp"
+            app:shapeAppearanceOverlay="@style/RoundedImage"
+            app:srcCompat="@drawable/logoimg"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RESCATADOGS"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="80dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fuente"
+            android:text="RESCATADOGS"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="60dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/redondeado"
+            android:backgroundTint="#FEE179"
+            android:orientation="vertical"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="160dp" />
+            <Button
+                android:id="@+id/btnIniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#9B5100"
+                android:fontFamily="@font/fuente"
+                android:onClick="pasarIniciar"
+                android:text="Iniciar Sesion"
+                android:textColor="#FDCE40"
+                android:textSize="35dp"
+                tools:layout_editor_absoluteX="138dp"
+                tools:layout_editor_absoluteY="160dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrarse"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="282dp" />
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#9B5100"
+                android:fontFamily="@font/fuente"
+                android:onClick="pasarRegistro"
+                android:text="Registrarse"
+                android:textColor="#FDCE40"
+                android:textSize="35dp"
+                tools:layout_editor_absoluteX="145dp"
+                tools:layout_editor_absoluteY="282dp" />
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="312dp"
-        android:layout_height="281dp"
-        app:srcCompat="@drawable/logoimg"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="375dp" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

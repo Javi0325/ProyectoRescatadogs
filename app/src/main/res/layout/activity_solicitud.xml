@@ -6,28 +6,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".solicitud">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/redondeado"
+            >
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOLICITUD ENVIADA"
+                android:fontFamily="@font/fuente"
+                android:textSize="55dp"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="94dp" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SOLICITUD ENVIADA"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="94dp" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensaje Relacionado a la adpcion creara &quot;Ficha&quot; con los datos del solicitante esto se vera en pagina web"
+                android:backgroundTint="@color/crema"
+                android:background="@drawable/redondeado"
+                android:layout_margin="20dp"
+                android:padding="20dp"/>
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="409dp"
-        android:layout_height="174dp"
-        android:text="Mensaje Relacionado a la adpcion creara &quot;Ficha&quot; con los datos del solicitante esto se vera en pagina web"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="221dp" />
+            <Button
+                android:id="@+id/btnRegresarInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:textColor="#FDCE40"
+                android:textSize="35dp"
+                android:fontFamily="@font/fuente"
+                android:backgroundTint="#9B5100"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regresar Inicio"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="423dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

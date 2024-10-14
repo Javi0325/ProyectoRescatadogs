@@ -6,54 +6,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".iniciarSesion">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/redondeado"
+            >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INICIAR SESION"
+                android:fontFamily="@font/fuente"
+                android:textSize="60dp"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="75dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:background="@drawable/redondeado"
+                android:backgroundTint="#FEE179"
+                >
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario"
+                    android:fontFamily="@font/fuente"
+                    android:textSize="30dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="53dp"
+                    tools:layout_editor_absoluteY="172dp" />
+                <EditText
+                    android:id="@+id/txtUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="20dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="52dp"
+                    tools:layout_editor_absoluteY="210dp" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Constraseña"
+                    android:fontFamily="@font/fuente"
+                    android:textSize="30dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="56dp"
+                    tools:layout_editor_absoluteY="274dp" />
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="20dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="52dp"
+                    tools:layout_editor_absoluteY="312dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INICIAR SESION"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="75dp" />
+                <Button
+                    android:id="@+id/btnIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#9B5100"
+                    android:fontFamily="@font/fuente"
+                    android:onClick="IniciarSesion"
+                    android:text="Iniciar Sesion"
+                    android:textColor="#FDCE40"
+                    android:textSize="30dp"
+                    tools:layout_editor_absoluteX="156dp"
+                    tools:layout_editor_absoluteY="450dp" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuario"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="172dp" />
+        </LinearLayout>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="210dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="312dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Constraseña"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="274dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesion"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="450dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

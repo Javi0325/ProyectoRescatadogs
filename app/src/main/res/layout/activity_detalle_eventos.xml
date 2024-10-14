@@ -6,36 +6,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".detalleEventos">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/redondeado"
+            >
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titulo Evento Elegido"
+                android:fontFamily="@font/fuente"
+                android:textColor="@color/black"
+                android:textSize="50dp"
+                />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Titulo Evento Elegido"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="73dp" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="141dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="141dp" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="251dp"
+                android:layout_height="213dp"
+                android:text="Detalle de Evento,Descripcion, Fecha,etc"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="321dp"
+                android:padding="20dp"
+                android:background="@drawable/redondeado"
+                android:backgroundTint="#FEE179"/>
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="251dp"
-        android:layout_height="213dp"
-        android:text="Detalle de Evento,Descripcion, Fecha,etc"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="321dp" />
+            <Button
+                android:id="@+id/btnRegresarEventos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:textColor="#FDCE40"
+                android:textSize="35dp"
+                android:fontFamily="@font/fuente"
+                android:backgroundTint="#9B5100"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="566dp" />
+        </LinearLayout>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regresar"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="566dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

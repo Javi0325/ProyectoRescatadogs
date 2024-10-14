@@ -6,12 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".enEspera">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#9B5100"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/redondeado"
+        >
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esta Pantalla se vera en caso de que el usuario tenga una solicitud de adopcion pendiente para su aprobacion o rechazo"
+           android:background="@drawable/redondeado"
+            android:backgroundTint="@color/crema"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            />
+        <Button
+            android:id="@+id/btnRegresarEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textColor="#FDCE40"
+            android:textSize="35dp"
+            android:fontFamily="@font/fuente"
+            android:backgroundTint="#9B5100"
+            />
+    </LinearLayout>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="340dp"
-        android:layout_height="61dp"
-        android:text="Esta Pantalla se vera en caso de que el usuario tenga una solicitud de adopcion pendiente para su aprobacion o rechazo"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="188dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
