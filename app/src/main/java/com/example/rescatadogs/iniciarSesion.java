@@ -62,10 +62,12 @@ public class iniciarSesion extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
+                        Toast.makeText(iniciarSesion.this, "Si se pudo", Toast.LENGTH_SHORT).show();
                         // Autenticación exitosa
                         Intent intent = new Intent(getApplicationContext(), bienvenida.class);
                         startActivity(intent);
                     } else {
+                        Toast.makeText(iniciarSesion.this, "No se pudo", Toast.LENGTH_SHORT).show();
                         // Autenticación fallida
                         Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
                     }

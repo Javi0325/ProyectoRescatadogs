@@ -49,11 +49,12 @@
                 android:background="@drawable/redondeado"
                 android:backgroundTint="#FEE179"
                 >
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="381dp"
-                    android:paddingTop="30dp"
-                    android:paddingBottom="30dp" />
+
+                <ListView
+                    android:id="@+id/lwEventos"
+                    android:layout_width="276dp"
+                    android:layout_height="360dp" />
+
             </LinearLayout>
 
 
