@@ -2,8 +2,6 @@ package com.example.rescatadogs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -11,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,10 +25,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class listaPerritos extends AppCompatActivity {
-    ListView mascotas;
-    ArrayList<String> listaMascotas;
-    ArrayAdapter<String> adapter;
+public class listaPerritos extends AppCompatActivity implements MascotasAdapter.OnMascotaClickListener {
+    RecyclerView mascotas;
+    ArrayList<Mascota> listaMascotas;
+    MascotasAdapter mascotaAdapter;
+    String usuario,nombre,apellido,ci,numero,email,fechaNacimiento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +42,20 @@ public class listaPerritos extends AppCompatActivity {
             return insets;
         });
 
-        mascotas = findViewById(R.id.lwMascotas);
+        // Inicializa RecyclerView
+        mascotas = findViewById(R.id.rwMascotas);
         listaMascotas = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaMascotas);
-        mascotas.setAdapter(adapter);
+        mascotaAdapter = new MascotasAdapter(listaMascotas, this); // Pasamos la lista y el listener
+        mascotas.setLayoutManager(new LinearLayoutManager(this));
+        mascotas.setAdapter(mascotaAdapter);
+        usuario= getIntent().getStringExtra("usuario");
+        nombre= getIntent().getStringExtra("nombre");
+        Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show();
+        apellido= getIntent().getStringExtra("apellido");
+        ci= getIntent().getStringExtra("ci");
+        numero= getIntent().getStringExtra("numero");
+        email= getIntent().getStringExtra("email");
+        fechaNacimiento= getIntent().getStringExtra("fechaNacimiento");
 
         obtenermascotas();
     }
@@ -58,14 +69,16 @@ public class listaPerritos extends AppCompatActivity {
                     public void onResponse(JSONArray response) {
                         try {
                             for (int i = 0; i < response.length(); i++) {
-                                JSONObject mascota = response.getJSONObject(i);
-                                String detalleMascota = mascota.getString("nombre") + " " +
-                                        mascota.getString("edad") + " " +
-                                        mascota.getString("descripcion");
-
-                                listaMascotas.add(detalleMascota);
+                                JSONObject mascotaJson = response.getJSONObject(i);
+                                Mascota mascota = new Mascota(
+                                        mascotaJson.getString("nombre"),
+                                        mascotaJson.getString("edad"),
+                                        mascotaJson.getString("sexo"),
+                                        mascotaJson.getString("image_url")
+                                );
+                                listaMascotas.add(mascota);
                             }
-                            adapter.notifyDataSetChanged();
+                            mascotaAdapter.notifyDataSetChanged();
                         } catch (JSONException e) {
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(), "Error al procesar los datos", Toast.LENGTH_SHORT).show();
@@ -83,5 +96,25 @@ public class listaPerritos extends AppCompatActivity {
         // Agregar la solicitud a la cola
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
+    }
+
+    @Override
+    public void onMascotaClick(Mascota mascota) {
+
+        // Aquí puedes manejar el evento de clic en una mascota
+
+        Intent intent = new Intent(getApplicationContext(), solicitud.class);
+        intent.putExtra("nombreMascota", mascota.getNombre());
+        intent.putExtra("edadMascota", mascota.getEdad());
+        intent.putExtra("sexoMascota", mascota.getSexo());
+        intent.putExtra("imagenMascota", mascota.getImagen());
+        intent.putExtra("nombre",nombre);
+        intent.putExtra("apellido",apellido);
+        intent.putExtra("usuario",usuario);
+        intent.putExtra("ci",ci);
+        intent.putExtra("numero",numero);
+        intent.putExtra("email",email);
+        intent.putExtra("fechaNacimiento",fechaNacimiento);
+        startActivity(intent);
     }
 }

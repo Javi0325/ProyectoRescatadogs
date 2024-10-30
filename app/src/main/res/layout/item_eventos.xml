@@ -8,28 +8,12 @@
     android:background="@color/crema"
     >
     <LinearLayout
-        android:gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:layout_marginRight="40dp"
-        >
-        <ImageView
-            android:id="@+id/imgPerro"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/logoimg" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="left"
         android:background="@drawable/redondeado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
+        android:orientation="vertical"
+
+       android:gravity="center"
         android:layout_margin="5dp"
         >
         <TextView
@@ -37,47 +21,40 @@
             android:id="@+id/tvNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NombreMascota"
+            android:text="NombreEvento"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:fontFamily="@font/fuente"
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Ubicacion"
+            android:textSize="15dp"
+            android:layout_margin="10dp"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp"
         android:layout_margin="5dp"
         android:background="@drawable/redondeado"
         >
         <TextView
             android:fontFamily="@font/fuente"
-            android:id="@+id/tvEdad"
+            android:id="@+id/tvFecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Edad"
-            android:textSize="20dp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/redondeado"
-        >
-        <TextView
-            android:fontFamily="@font/fuente"
-            android:id="@+id/tvSexo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Sexo"
-            android:textSize="20dp"/>
-
+            android:text="FechaEvento"
+            android:textSize="15dp"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 </LinearLayout>

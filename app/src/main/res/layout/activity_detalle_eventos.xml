@@ -22,34 +22,45 @@
             android:layout_margin="10dp"
             android:background="@drawable/redondeado"
             >
-            <TextView
-                android:id="@+id/textView17"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Titulo Evento Elegido"
-                android:fontFamily="@font/fuente"
-                android:textColor="@color/black"
-                android:textSize="50dp"
-                />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                tools:layout_editor_absoluteX="151dp"
-                tools:layout_editor_absoluteY="141dp" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="251dp"
-                android:layout_height="213dp"
-                android:text="Detalle de Evento,Descripcion, Fecha,etc"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="321dp"
-                android:padding="20dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
                 android:background="@drawable/redondeado"
-                android:backgroundTint="#FEE179"/>
+                >
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Titulo Evento Elegido"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/fuente"
+                    android:textColor="@color/black"
+                    android:textSize="50dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_launcher_foreground"
+                    tools:layout_editor_absoluteX="151dp"
+                    tools:layout_editor_absoluteY="141dp" />
+
+                <TextView
+                    android:id="@+id/txtDescripcion"
+                    android:layout_width="251dp"
+                    android:layout_height="213dp"
+                    android:text="Detalle de Evento,Descripcion, Fecha,etc"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/redondeado"
+                    android:backgroundTint="#FEE179"/>
+            </LinearLayout>
+
 
             <Button
                 android:id="@+id/btnRegresarEventos"

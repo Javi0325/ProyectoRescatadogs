@@ -62,9 +62,27 @@ public class iniciarSesion extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
-                        Toast.makeText(iniciarSesion.this, "Si se pudo", Toast.LENGTH_SHORT).show();
+
+                        // Extraer los datos del usuario del objeto "user"
+                        JSONObject user = jsonResponse.getJSONObject("user");
+                        String nombre = user.getString("nombre");
+                        String apellido = user.getString("apellido");
+                        String usuario = user.getString("usuario");
+                        String ci = user.getString("ci");
+                        String numero = user.getString("numero");
+                        String email = user.getString("email");
+                        String fechaNacimiento = user.getString("fechaNacimiento");
+
                         // Autenticación exitosa
                         Intent intent = new Intent(getApplicationContext(), bienvenida.class);
+                        intent.putExtra("nombre",nombre);
+                        intent.putExtra("apellido",apellido);
+                        intent.putExtra("usuario",usuario);
+                        intent.putExtra("ci",ci);
+                        intent.putExtra("numero",numero);
+                        intent.putExtra("email",email);
+                        intent.putExtra("fechaNacimiento",fechaNacimiento);
+                        Toast.makeText(iniciarSesion.this, usuario, Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                     } else {
                         Toast.makeText(iniciarSesion.this, "No se pudo", Toast.LENGTH_SHORT).show();
@@ -95,9 +113,9 @@ public class iniciarSesion extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-    public void IniciarSesion(View v)
+   /* public void IniciarSesion(View v)
     {
         Intent IniciarSesion=new Intent(getApplicationContext(), bienvenida.class);
         startActivity(IniciarSesion);
-    }
+    }*/
 }

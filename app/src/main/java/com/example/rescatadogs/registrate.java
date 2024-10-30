@@ -92,7 +92,7 @@ public class registrate extends AppCompatActivity {
                 params.put("numero", numeroR.getText().toString());
                 params.put("ci", ciR.getText().toString());
                 params.put("email", correoR.getText().toString());
-                params.put("fecaNacimiento", fechaNacimientoR.getText().toString());
+                params.put("fechaNacimiento", fechaNacimientoR.getText().toString());
 
                 return params;
             }
